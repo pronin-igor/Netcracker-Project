@@ -1,0 +1,13 @@
+<div class="content">
+  <app-slider></app-slider>
+  <div class="cards">
+    <div class="card" *ngFor="let product of products" [routerLink]="['product', product._id]">
+      <img class="card-image" src="{{product.src}}/1.jpg" alt="">
+      <div class="card-text">{{product.name}}</div>
+      <div class="card-description">{{product.description}}</div>
+      <button class="card-button">Купить</button>
+    </div>
+  </div>
+</div>
+
+

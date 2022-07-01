@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="container-main">
+    <form novalidate [formGroup]="form" class="container-main-formGroup" (ngSubmit)="Submit()">
+      <p class="container-main-formGroup-title">Создать аккаунт</p>
+      <input type="email" placeholder="Почта:" formControlName="mail">
+      <span *ngIf="form.get('mail')?.invalid && form.get('mail')?.touched">
+        <span class="container-main-formGroup-warning" *ngIf="form.get('mail')?.errors?.['required']">Email не должен быть пустым</span>
+        <span class="container-main-formGroup-warning" *ngIf="form.get('mail')?.errors?.['email']">Введите корректный email адрес</span>
+      </span>
+      <input type="password" placeholder="Пароль:" formControlName="password">
+      <span *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+        <span class="container-main-formGroup-warning" *ngIf="form.get('password')?.errors?.['required']">Пароль не должен быть пустым</span>
+        <span class="container-main-formGroup-warning" *ngIf="form.get('password')?.errors?.['minlength']">
+          Пароль должен быть больше {{form.get('password')?.errors?.['minlength']['requiredLength']}} символов
+          Сейчас {{form.get('password')?.errors?.['minlength']['actualLength']}}
+        </span>
+      </span>
+      <button type="submit" class="container-main-formGroup-submit" [disabled]="form.invalid || form.disabled">Создать</button>
+    </form>
+  </div>
+</div>

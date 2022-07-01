@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  &-pictures {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+    &-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &-text {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px;
+    box-sizing: border-box;
+    &-name {
+      font-style: oblique;
+      font-size: xx-large;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &-description {
+      font-size: x-large;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &-text {
+      text-align: center;
+      font-size: x-large;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="number">1/3</div>
+    <img src="../../../assets/slider/slider.1.jpg" alt="картинка">
+    <div class="text">Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number">2/3</div>
+    <img src="../../../assets/slider/slider.2.jpg" alt="картинка">
+    <div class="text">Text</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="number">3/3</div>
+    <img src="../../../assets/slider/slider.3.jpg" alt="картинка">
+    <div class="text">Text</div>
+  </div>
+
+  <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+  <a class="next" (click)="plusSlides(1)">&#10095;</a>
+
+  <div class="dots">
+    <span class="dot" (click)="currentSlide(1)"></span>
+    <span class="dot" (click)="currentSlide(2)"></span>
+    <span class="dot" (click)="currentSlide(3)"></span>
+  </div>
+</div>
+

@@ -1,0 +1,42 @@
+.header {
+  border: 1px black solid;
+  display: flex;
+  &-image {
+    height: auto;
+    width: 5%;
+    cursor: pointer;
+  }
+  &-menu {
+    width: 95%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    & li {
+      list-style-type: none;
+    }
+    & a {
+      text-decoration: none;
+      position: relative;
+      color: black;
+    }
+    &-link a:before {
+      content: '';
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      height: 2px;
+      width: 0%;
+      background-color: black;
+      transition: 0.2s;
+    }
+    &-link a:hover:before {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+.active {
+  font-weight: bold;
+}
